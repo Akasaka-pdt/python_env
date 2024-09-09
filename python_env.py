@@ -5,7 +5,7 @@ import contextlib
 
 st.title("Pythonコード実行アプリ")
 
-code = st.text_area("ここにPythonコードを入力してください:", placeholder="ここにPythonコードを入力してください。右下をドラッグすると、枠の縦幅を変えることができます。")
+code = st.text_area("ここにPythonコードを入力してください:", placeholder="ここにPythonコードを入力してください。枠の右下をドラッグすると、縦幅を変えることができます。")
 
 num_inputs = st.sidebar.number_input("標準入力の数を指定してください:", min_value=1, max_value=10, value=1)
 
