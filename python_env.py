@@ -9,7 +9,6 @@ code = st.text_area("ここにPythonコードを入力してください:", plac
 
 num_inputs = st.sidebar.number_input("標準入力の数を指定してください:", min_value=1, max_value=10, value=1)
 
-
 inputs = []
 for i in range(num_inputs):
     user_input = st.sidebar.text_input(f"標準入力 {i+1}:", key=f"input_{i}")
@@ -35,5 +34,5 @@ if st.button("実行"):
         
         builtins.input = original_input
         
-        st.text("実行結果:")
-        st.text(output.getvalue())
+        st.markdown("### 実行結果:")
+        st.code(output.getvalue(), language='python')
